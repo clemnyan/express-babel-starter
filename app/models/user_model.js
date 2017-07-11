@@ -10,6 +10,7 @@ const UserSchema = new Schema({
   username: { type: String, unique: true, lowercase: true },
   fullname: String,
   password: String,
+
   cooperatives: [{ type: Schema.Types.ObjectId, ref: 'cooperatives' }],
   Chat: [{ type: Schema.Types.ObjectId, ref: 'chat' }],
 });
